@@ -78,3 +78,12 @@ artifacts:
 - path: temperature_converter_example\TempConv.89k
   name: TempConv.89k
   type: file
+- path: temperature_converter_example\temperature_converter.o
+  name: temperature_converter.o
+  type: file
+- path: temperature_converter_example\interface.o
+  name: interface.o
+  type: file
+- path: temperature_converter_example\temperature_converter.out
+  name: temperature_converter.out
+  type: file
