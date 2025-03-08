@@ -2,7 +2,7 @@ version: 1.0.{build}
 
 install:
 - cmd: |
-    if exist C:\sierra\ SET cached=true
+    rd /s /q C:\sierra
 
     if not defined cached mkdir C:\sierra_temp
     if not defined cached cd \sierra_temp
@@ -46,7 +46,7 @@ install:
     if not defined cached mkdir keys
     if not defined cached cd keys
     if not defined cached echo 0109> sdk-92p.key
-    if not defined cached echo 405D14C1A69D6985449FBAA57BEB7BA23EC96D4EBC088B6E245FA98DBEFBA68001FAA03FFF17CEB739D7C7976663D5CF320CE865D56F8F755822E810508ED2154>> sdk-92p.key
+    if not defined cached echo 405D14C1A69D6985449FBAA57BEB7BA23EC96D4EBC088B6E245FA98DBEFBA68001FAA03FFF17CEB739D7C7976663D5CF320CE865D56F8F755822E810508ED2155>> sdk-92p.key
     if not defined cached echo | set /p dummy="402D84EE838A1207AF5104207122074369AF4150B947B4C5291AEA326905EA9135F2A3EC3254213F2E93222A89F3E9A44E4301AC83C47832D72EBCBE4A9AAC668" >> sdk-92p.key
     
 cache: C:\sierra\
