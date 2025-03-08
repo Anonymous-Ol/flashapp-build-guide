@@ -14,7 +14,7 @@ FRAME(appObj, OO_SYSTEM_FRAME, 0, OO_APP_FLAGS, 4)
    ATTR(OO_APP_DEFAULT_MENU, &AppMenu )
 ENDFRAME
 
-volatile uint32_t test = 53;
+volatile long int test = 53;
 pFrame pAppObj = (pFrame)&appObj; // must be 1st!
 WINDOW appW;
 char buf_cels[11];
