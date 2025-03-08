@@ -75,6 +75,6 @@ build_script:
     ren temperature_converter.89k TempConv.89k
 
 artifacts:
-- path: temperature_converter_example\TempConv.9xk
+- path: temperature_converter_example\TempConv.89k
   name: TempConv.89k
   type: file
