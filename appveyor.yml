@@ -45,9 +45,9 @@ install:
 
     if not defined cached mkdir keys
     if not defined cached cd keys
-    if not defined cached echo 0101> sdk-92p.key
-    if not defined cached echo 406104CDFAD955D41F1ECCB9B622007FE8BC75E8B28DA178334755FEF27C564D47B04FD82498C163B762991C68CF64E29236BC41A4C1BCB9793B6EE965407C74BC>> sdk-92p.key
-    if not defined cached echo | set /p dummy="40E17C4AA4C942CC57282E9B911E7B39352A2D8D4EC15398366C971FF7D2D92FB18D35D60A78C086CCE0F08F0F4CC36F676A4604E529DD72C95C11AED2F48D6D37" >> sdk-92p.key
+    if not defined cached echo 0109> sdk-92p.key
+    if not defined cached echo 405D14C1A69D6985449FBAA57BEB7BA23EC96D4EBC088B6E245FA98DBEFBA68001FAA03FFF17CEB739D7C7976663D5CF320CE865D56F8F755822E810508ED2154>> sdk-92p.key
+    if not defined cached echo | set /p dummy="402D84EE838A1207AF5104207122074369AF4150B947B4C5291AEA326905EA9135F2A3EC3254213F2E93222A89F3E9A44E4301AC83C47832D72EBCBE4A9AAC668" >> sdk-92p.key
     
 cache: C:\sierra\
 
@@ -59,7 +59,7 @@ build_script:
 
     C:\sierra\bin\rc32.exe -mn interface.r
 
-    C:\sierra\bin\com68.exe -D_92 -q -Q -l -Oc1f0l3m1p1r2x1 -Xbef3IL -I C:\sierra\include temperature_converter.c temperature_converter.s_
+    C:\sierra\bin\com68.exe -D_89 -q -Q -l -Oc1f0l3m1p1r2x1 -Xbef3IL -I C:\sierra\include temperature_converter.c temperature_converter.s_
 
     C:\sierra\bin\fline.exe temperature_converter.s_ temperature_converter.s
 
@@ -70,7 +70,7 @@ build_script:
     REM TI Flash Studio also used -m
     C:\sierra\bin\link68.exe -Q -r -L"C:\sierra\lib" -o temperature_converter.out temperature_converter.o interface.o -lams SECTIONS{GROUP:{.text:{}.const:{}.data:{}.bss:{}}}
 
-    C:\sierra\bin\sdkpc.exe -O3 -s C:\sierra\keys\sdk-92p.key 92 temperature_converter.out TempConv
+    C:\sierra\bin\sdkpc.exe -O3 -s C:\sierra\keys\sdk-92p.key 89 temperature_converter.out TempConv
 
     ren temperature_converter.9xk TempConv.9xk
 
