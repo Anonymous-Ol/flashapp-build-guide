@@ -28,9 +28,6 @@ static void AP_app(pFrame self, PEvent e) {
 	Access_AMS_Global_Variables;
 
 	switch (e->command) {
-		case CM_INSTALL:
-			buf_cels[0] = '1';
-			break;
 		case CM_START:
 			MO_currentOptions();
 
