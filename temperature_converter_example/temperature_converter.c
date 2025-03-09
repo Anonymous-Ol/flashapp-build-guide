@@ -62,6 +62,7 @@ static void AP_app(pFrame self, PEvent e) {
 			break;
 
 		case ACM_CELC:
+			WinDeactivate(&appW);
 			// If you want to expand this demo app, you could do the input and output in the main window instead of in a dialog.
 			// You could also do all of the calculations on the expression stack (estack) to make the app more flexible (better integration into the OS, bigger numbers).
 			if (KB_ENTER == Dialog(&fahr_to_cels, -1, -1, buf_fahr, NULL)) {
